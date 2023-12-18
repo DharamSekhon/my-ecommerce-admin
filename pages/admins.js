@@ -75,12 +75,12 @@ function AdminsPage({swal}) {
             onChange={ev => setEmail(ev.target.value)}
             placeholder="google email"/>
           
-          <input
+          {/* <input
             type="text"
             className="mb-0"
             value={password}
             onChange={ev => setPassword(ev.target.value)}
-            placeholder="Password"/>
+            placeholder="Password"/> */}
 
           <button
             type="submit"

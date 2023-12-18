@@ -23,9 +23,10 @@ export default function Layout({children}) {
           <div className="w-3/6 bg-three text-two rounded-tr-2xl rounded-br-2xl p-2">
                   
                 
-                  <h2 className="text-3xl font-bold mb-2">Login to Admin Panel</h2>
-                  <div className="border-2 w-44 border-white inline-block mb-4 mt-0"></div>
-                  <div className="flex flex-col items-center mb-3">
+                  <h2 className="text-4xl font-bold mb-4">Login to Admin Panel</h2>
+                  <div className="display-flex flex-col ">
+                   <div className="border-2 w-44 border-white inline-block mb-8 mt-0"></div>
+                  {/*<div className="flex flex-col items-center mb-3">
                     <div className="bg-gray-100 w-64 p-2 flex items-center rounded-lg">
                       <FaRegEnvelope className="text-two"/>
                         <input type="email" name="email" placeholder="Email" className="text-black outline-none rounded-lg text-sm bg-gray-100 mb-0 py-0 border-0 shadow-0"/>
@@ -42,12 +43,39 @@ export default function Layout({children}) {
                     className="border-2 hover:bg-white hover:text-two rounded-lg px-12 py-2 inline-block font-semibold border-two bg-two text-white" 
                     type="submit">Login</button>
 
-                    <p className="text-white my-3">or Login with Providers</p>
+                    <p className="text-white my-3">or Login with Providers</p> */}
+                    <div>
                     <button onClick={() => signIn('google')} 
-                    className="border-2 hover:bg-white hover:text-two rounded-lg px-12 py-2 inline-block font-semibold border-two bg-two text-white"
+                    className="border-2 hover:bg-white w-80 hover:text-two rounded-lg  px-12 py-2 inline-block font-semibold border-two bg-two text-white mb-4"
                     >
                       Login with Google
+                      </button></div>
+
+                      <button onClick={() => signIn('facebook')} 
+                    className="border-2 hover:bg-white w-80 hover:text-two rounded-lg w-58 px-12 py-2 inline-block font-semibold border-two bg-two text-white mb-4"
+                    >
+                      Login with Facebook
                       </button>
+
+                      <button onClick={() => signIn('github')} 
+                    className="border-2 hover:bg-white w-80 hover:text-two rounded-lg px-12 py-2 inline-block font-semibold border-two bg-two text-white mb-4"
+                    >
+                      Login with Github
+                      </button>
+
+                      <button onClick={() => signIn('reddit')} 
+                    className="border-2 hover:bg-white w-80 hover:text-two rounded-lg px-12 py-2 inline-block font-semibold border-two bg-two text-white mb-4"
+                    >
+                      Login with Reddit
+                      </button>
+
+
+                      <button onClick={() => signIn('discord')} 
+                    className="border-2 hover:bg-white w-80 hover:text-two rounded-lg px-12 py-2 inline-block font-semibold border-two bg-two text-white mb-4"
+                    >
+                      Login with Discord
+                      </button>
+                      </div>
             </div>
           </div>  
       </main>
