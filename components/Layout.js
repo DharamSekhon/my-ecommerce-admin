@@ -4,6 +4,9 @@ import {useState} from "react";
 import Logo from "@/components/Logo";
 import {FaRegEnvelope} from "react-icons/fa";
 import {MdLockOutline} from "react-icons/md";
+import { FaFacebook } from "react-icons/fa";
+import { FaGithubSquare } from "react-icons/fa";
+
 
 export default function Layout({children}) {
   const [showNav,setShowNav] = useState(false);
@@ -44,32 +47,44 @@ export default function Layout({children}) {
 
                     {/* <p className="text-white my-3">or Login with Providers</p> */}
                     <button onClick={() => signIn('google')} 
-                    className="btn border-2 hover:bg-white hover:text-two mb-4 rounded-lg px-12 py-2 inline-block font-semibold border-two bg-two text-white"
+                    // className="btn border-2 hover:bg-white hover:text-two mb-4 rounded-lg px-12 py-2 inline-block font-semibold border-two bg-two text-white"
+                    className="border-2 hover:bg-white hover:text-two mb-4 rounded-lg px-12 py-2 inline-flex items-center justify-center font-semibold border-two bg-two text-white"
                     ><img src="/googlelogo.png" alt="Google Logo" className="inline-block h-6 mr-10" />
                       Login with Google
                       </button>
 
+                      <div>
                       <button onClick={() => signIn('facebook')} 
-                    className="border-2 hover:bg-white hover:text-two mb-4 rounded-lg px-12 py-2 inline-block font-semibold border-two bg-two text-white"
-                    ><img src="/Facebook(2019).jpg" alt="Google Logo" className="inline-block h-6 mr-6" />
+                        // className="border-2 hover:bg-white hover:text-two mb-4 rounded-lg px-12 py-2 inline-block font-semibold border-two bg-two text-white"
+                        className="border-2 hover:bg-white hover:text-two mb-4 rounded-lg px-12 py-2 inline-flex items-center justify-center font-semibold border-two bg-two text-white"
+                    >
+                    {/* <img src="/Facebook(2019).jpg" alt="Google Logo" className="inline-block h-6 mr-6" /> */}
+                    <FaFacebook className="inline-block h-6 w-6 text-blue-500 mr-6" />
                       Login with Facebook
                       </button>
+                      </div>
 
                       <button onClick={() => signIn('discord')} 
-                    className="border-2 hover:bg-white hover:text-two rounded-lg mb-4 px-12 py-2 inline-block font-semibold border-two bg-two text-white"
+                    // className="border-2 hover:bg-white hover:text-two rounded-lg mb-4 px-12 py-2 inline-block font-semibold border-two bg-two text-white"
+                    className="border-2 hover:bg-white hover:text-two mb-4 rounded-lg px-12 py-2 inline-flex items-center justify-center font-semibold border-two bg-two text-white"
                     ><img src="/discordlogo.png" alt="Google Logo" className="inline-block h-6 mr-9" />
                       Login with Discord
                       </button>
 
                       <button onClick={() => signIn('reddit')} 
-                    className="border-2 hover:bg-white hover:text-two rounded-lg px-12 mb-4 py-2 inline-block font-semibold border-two bg-two text-white"
+                    // className="border-2 hover:bg-white hover:text-two rounded-lg px-12 mb-4 py-2 inline-block font-semibold border-two bg-two text-white"
+                    className="border-2 hover:bg-white hover:text-two mb-4 rounded-lg px-12 py-2 inline-flex items-center justify-center font-semibold border-two bg-two text-white"
                     ><img src="/redditlogo.png" alt="Google Logo" className="inline-block h-6 mr-10" />
                       Login with Reddit
                       </button>
 
                       <button onClick={() => signIn('github')} 
-                    className="border-2 w-200px hover:bg-white hover:text-two rounded-lg px-12 py-2 mb-4 inline-block font-semibold border-two bg-two text-white"
-                    ><img src="/githublogo.png" alt="Google Logo" className="inline-block h-6 mr-9" />
+                    // className="border-2 w-200px hover:bg-white hover:text-two rounded-lg px-12 py-2 mb-4 inline-block font-semibold border-two bg-two text-white"
+                    className="border-2 hover:bg-white hover:text-two mb-4 rounded-lg px-12 py-2 inline-flex items-center justify-center font-semibold border-two bg-two text-white"
+                    >
+                      {/* <img src="/githublogo.png" alt="Google Logo" className="inline-block h-6 mr-9" /> */}
+                      <FaGithubSquare className="inline-block h-6 w-6  mr-9" />
+
                       Login with Github
                       </button>
             </div>
