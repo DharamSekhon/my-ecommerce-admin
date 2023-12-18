@@ -51,7 +51,7 @@ export default function Layout({children}) {
 
                       <button onClick={() => signIn('facebook')} 
                     className="border-2 hover:bg-white hover:text-two mb-4 rounded-lg px-12 py-2 inline-block font-semibold border-two bg-two text-white"
-                    ><img src="/facebooklogo.png" alt="Google Logo" className="inline-block h-6 mr-6" />
+                    ><img src="/Facebook(2019).jpg" alt="Google Logo" className="inline-block h-6 mr-6" />
                       Login with Facebook
                       </button>
 
