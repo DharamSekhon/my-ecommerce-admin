@@ -23,11 +23,11 @@ export default async function handle(req, res) {
   await isAdminRequest(req, res);
 
   if (req.method === 'POST') {
-    const {email,password} = req.body;
+    const {email} = req.body;
     if (await Admin.findOne({email})) {
       res.status(400).json({message:'admin already exists!'});
     } else {
-      res.json(await Admin.create({email,password}));
+      res.json(await Admin.create({email}));
     }
   }
 

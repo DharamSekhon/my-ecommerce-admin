@@ -7,20 +7,19 @@ import {prettyDate} from "@/lib/date";
 
 function AdminsPage({swal}) {
   const [email,setEmail] = useState('');
-  const [password,setPassword] = useState('');
+  
   const [adminEmails,setAdminEmails] = useState([]);
-  const [adminPasswords,setAdminPasswords] = useState([]);
+  
   const [isLoading,setIsLoading] = useState(false);
   function addAdmin(ev){
     ev.preventDefault();
-    axios.post('/api/admins', {email,password}).then(res => {
+    axios.post('/api/admins', {email}).then(res => {
       console.log(res.data);
       swal.fire({
         title: 'Admin created!',
         icon: 'success',
       });
       setEmail('');
-      setPassword('');
       loadAdmins();
     }).catch(err => {
       swal.fire({
@@ -30,10 +29,10 @@ function AdminsPage({swal}) {
       });
     });
   }
-  function deleteAdmin(_id, email,password) {
+  function deleteAdmin(_id, email) {
     swal.fire({
       title: 'Are you sure?',
-      text: `Do you want to delete admin ${email,password}?`,
+      text: `Do you want to delete admin ${email}?`,
       showCancelButton: true,
       cancelButtonText: 'Cancel',
       confirmButtonText: 'Yes, Delete!',
@@ -55,7 +54,7 @@ function AdminsPage({swal}) {
     setIsLoading(true);
     axios.get('/api/admins').then(res => {
       setAdminEmails(res.data);
-      setAdminPasswords(res.data);
+      
       setIsLoading(false);
     });
   }
